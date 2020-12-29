@@ -266,9 +266,9 @@ class TestGitHub(unittest.TestCase):
         # Arrange
         mock_get.return_value.status_code = 200
         mock_get.return_value.json.return_value = [
-            {'download_url': 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/'
+            {'download_url': 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/'
                 'samplefiles/v0.0.1/file1.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'},
-            {'download_url': 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/'
+            {'download_url': 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/'
                 'samplefiles/v0.0.1/file2.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'}
         ]
 
@@ -332,7 +332,7 @@ class TestGitHub(unittest.TestCase):
 
         mock_got_chunk = Mock()
 
-        download_url = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
             'samplefiles/v0.0.1/file2.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
 
         api_url = 'https://api.github.com'
@@ -360,7 +360,7 @@ class TestGitHub(unittest.TestCase):
 
         mock_got_chunk = Mock()
 
-        download_url = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
             'samplefiles/v0.0.1/file2.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
 
         api_url = 'https://api.github.com'
@@ -391,9 +391,9 @@ class TestGitHub(unittest.TestCase):
         logger = Mock(spec=Logger)
         git = GitHub(api_url, token, logger)
 
-        download_url_1 = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url_1 = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
                 'samplefiles/v0.0.1/file1.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
-        download_url_2 = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url_2 = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
                 'samplefiles/v0.0.1/file2.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
         git.repos_content = Mock(return_value=[
             {'download_url': download_url_1},
@@ -520,9 +520,9 @@ class TestGitHub(unittest.TestCase):
         logger = Mock(spec=Logger)
         git = GitHub(api_url, token, logger)
 
-        download_url_1 = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url_1 = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
                 'samplefiles/v0.0.1/file1.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
-        download_url_2 = 'https://raw.githubusercontent.com//magencio/git_to_dbfs_function/master/' +\
+        download_url_2 = 'https://raw.githubusercontent.com/magencio/git_to_dbfs_function/master/' +\
                 'samplefiles/v0.0.1/file2.csv?token=ABACQB6ZHRWQUSV5N2EGKWK7L5YJC'
         git.repos_content = Mock(return_value=[
             {'download_url': download_url_1},
